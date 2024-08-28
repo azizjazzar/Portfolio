@@ -1,5 +1,5 @@
 {
-  "welcome": "Bienvenue sur mon portfolio !",
+  "welcome": "Salut,je suis ",
   "about": "À propos",
   "projects": "Projets",
   "Hosted": "Hébergé",
@@ -7,5 +7,9 @@
   "contact": "Contact",
   "GitHub": "GitHub",
   "Linkedin": "LinkedIn",
-  "Resume": "CV"
+  "Resume": "CV",
+  "devlp": "un ingénieur informatique",
+  "descdev": "Étudiant en ingénierie informatique à l'Université Privée d'Esprit de 2020 à 2025. Expérimenté dans la pile MERN et en JavaScript full-stack. À la recherche d'un projet de fin d'études à partir de mi-décembre 2024."
+
+
 }

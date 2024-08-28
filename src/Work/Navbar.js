@@ -40,14 +40,21 @@ const Navbar = () => {
           </button>
         </div>
         <div className="lg:flex lg:items-center lg:justify-center hidden lg:block flex-grow">
-          <a href="/projects" className="text-white block px-4 py-2 rounded hover:text-gray-400 transition duration-300">{t('projects')}</a>
-          <a href="/about" className="text-white block px-4 py-2 rounded hover:text-gray-400 transition duration-300">{t('about')}</a>
-          <a href="/contact" className="text-white block px-4 py-2 rounded hover:text-gray-400 transition duration-300">{t('contact')}</a>
-          <a href="/hosted" className="text-white block px-4 py-2 rounded hover:text-gray-400 transition duration-300">{t('Hosted')}</a>
-          <a href="/skills" className="text-white block px-4 py-2 rounded hover:text-gray-400 transition duration-300">{t('Skills')}</a>
-          <a href="/github" className="text-white block px-4 py-2 rounded hover:text-gray-400 transition duration-300">{t('GitHub')}</a>
-          <a href="/linkedin" className="text-white block px-4 py-2 rounded hover:text-gray-400 transition duration-300">{t('Linkedin')}</a>
-          <a href="/resume" className="text-white block px-4 py-2 rounded hover:text-gray-400 transition duration-300">{t('Resume')}</a>
+          <a href="/projects" className="text-custom-gray block px-4 py-2 rounded hover:text-white transition duration-300">{t('projects')}</a>
+          <a href="/about" className="text-custom-gray block px-4 py-2 rounded hover:text-white transition duration-300">{t('about')}</a>
+          <a href="/contact" className="text-custom-gray block px-4 py-2 rounded hover:text-white transition duration-300">{t('contact')}</a>
+          <a href="/hosted" className="text-custom-gray block px-4 py-2 rounded hover:text-white transition duration-300">{t('Hosted')}</a>
+          <a href="/skills" className="text-custom-gray block px-4 py-2 rounded hover:text-white transition duration-300">{t('Skills')}</a>
+          <a href="/linkedin" className="flex items-center space-x-2 text-custom-gray block px-4 py-2 rounded hover:text-white transition duration-300">
+          <img src="/github.png" alt="LinkedIn" className="w-6 h-6" />
+          <span>{t('GitHub')}</span>
+          </a>
+          <a href="/linkedin" className="flex items-center space-x-2 text-custom-gray block px-4 py-2 rounded hover:text-white transition duration-300">
+          <img src="/linkedin.png" alt="LinkedIn" className="w-6 h-6" />
+          <span>{t('Linkedin')}</span>
+          </a>
+
+          <a href="/resume" className="text-custom-gray block px-4 py-2 rounded hover:text-white transition duration-300">{t('Resume')}</a>
           <div ref={dropdownRef} className="relative">
             <LanguageDropdown />
           </div>
