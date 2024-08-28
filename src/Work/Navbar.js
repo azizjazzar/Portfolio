@@ -4,7 +4,7 @@ import LanguageDropdown from "./LanguageDropdown"
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const { t } = useTranslation();
-  const [setIsDropdownOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
   useEffect(() => {
