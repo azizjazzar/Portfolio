@@ -3,15 +3,9 @@ import { useTranslation } from 'react-i18next';
 import LanguageDropdown from "./LanguageDropdown"
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const { t, i18n } = useTranslation();
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const { t } = useTranslation();
+  const [setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
-
-  
-  const handleLanguageChange = (lng) => {
-    i18n.changeLanguage(lng);
-    setIsDropdownOpen(false); // Fermer le menu déroulant après sélection
-  };
 
   useEffect(() => {
     const handleScroll = () => {
