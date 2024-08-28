@@ -28,8 +28,6 @@ const Navbar = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
-
   return (
     <nav className={`fixed top-0 left-0 w-full p-4 transition-colors duration-300 ${scrolled ? 'bg-gray-900' : 'bg-custom-dark'} z-50`}>
       <div className="container mx-auto flex items-center">
@@ -52,10 +50,7 @@ const Navbar = () => {
           <a href="/linkedin" className="text-white block px-4 py-2 rounded hover:text-gray-400 transition duration-300">{t('Linkedin')}</a>
           <a href="/resume" className="text-white block px-4 py-2 rounded hover:text-gray-400 transition duration-300">{t('Resume')}</a>
           <div ref={dropdownRef} className="relative">
-            <button onClick={toggleDropdown} className="text-white px-4 py-2 rounded hover:text-gray-400 transition duration-300">
-              {t('language')}
-            </button>
-            {isDropdownOpen && <LanguageDropdown />}
+            <LanguageDropdown />
           </div>
         </div>
       </div>
