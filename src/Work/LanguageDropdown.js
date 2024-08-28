@@ -8,10 +8,9 @@ const LanguageDropdown = () => {
 
   const handleLanguageChange = (lng) => {
     i18n.changeLanguage(lng);
-    setIsDropdownOpen(false); // Fermer le menu déroulant après sélection
+    setIsDropdownOpen(false); 
   };
 
-  // Fermer le menu déroulant si l'utilisateur clique ailleurs
   const handleClickOutside = (event) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
       setIsDropdownOpen(false);
@@ -32,7 +31,7 @@ const LanguageDropdown = () => {
         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
       >
         <img
-          src={`/${i18n.language}.png`} // Assurez-vous que ce chemin est correct
+          src={`/${i18n.language}.png`} 
           alt="Language"
           className="w-6 h-4 mr-2"
         />
@@ -60,7 +59,7 @@ const LanguageDropdown = () => {
               className="flex items-center px-4 py-2 text-white hover:bg-gray-700 w-full text-left"
             >
               <img
-                src="/en.png" // Assurez-vous que ce chemin est correct
+                src="/en.png" 
                 alt="English"
                 className="w-6 h-4 mr-2"
               />
@@ -71,7 +70,7 @@ const LanguageDropdown = () => {
               className="flex items-center px-4 py-2 text-white hover:bg-gray-700 w-full text-left"
             >
               <img
-                src="/fr.png" // Assurez-vous que ce chemin est correct
+                src="/fr.png" 
                 alt="French"
                 className="w-6 h-4 mr-2"
               />
