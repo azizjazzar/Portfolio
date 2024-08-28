@@ -5,7 +5,6 @@ import LanguageDropdown from "./LanguageDropdown";
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const { t } = useTranslation();
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
   useEffect(() => {
@@ -20,7 +19,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsDropdownOpen(false);
+        // If you need to handle dropdown closing, you can add logic here
       }
     };
 
