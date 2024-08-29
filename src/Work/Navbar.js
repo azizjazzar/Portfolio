@@ -6,7 +6,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [language, setLanguage] = useState('fr'); // État pour la langue
   const [showModal, setShowModal] = useState(false); // État pour afficher la modale
-  const { i18n, t } = useTranslation();
+  const { t } = useTranslation(); // Retirer i18n car non utilisé
   const dropdownRef = useRef(null);
 
   useEffect(() => {
@@ -21,6 +21,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setShowModal(false); // Fermer la modale lorsque l'utilisateur clique en dehors
       }
     };
 
@@ -46,7 +47,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 w-full p-4 transition-colors duration-300 ${scrolled ? 'bg-gray-900' : 'bg-custom-dark'} z-50`}>
+      <nav className={`fixed top-0 left-0 w-full p-4 transition-colors duration-300 ${scrolled ? 'bg-gray-900' : 'bg-custom-dark'} z-50`} style={{ userSelect: 'none' }}>
         <div className="container mx-auto flex items-center">
           <img src="/jazzar.jpg" alt="Aziz Jazzar" className="w-12 h-12 rounded-full mr-5" />
           <div className="text-white text-2xl font-bold">Aziz Jazzar</div>

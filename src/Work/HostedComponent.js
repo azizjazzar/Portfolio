@@ -1,11 +1,17 @@
 import React from "react";
 import { useTranslation } from 'react-i18next';
+import PropTypes from 'prop-types';
 
 const Project = ({ title, description, url }) => {
     const handleClick = () => {
         if (url) {
             window.open(url, '_blank');
         }
+    };
+    Project.propTypes = {
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        url: PropTypes.string
     };
 
     return (
