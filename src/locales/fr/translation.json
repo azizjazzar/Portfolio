@@ -1,5 +1,5 @@
 {
-  "welcome": "Salut,je suis ",
+  "welcome": "Bonjour,je suis ",
   "about": "À propos",
   "projects": "Projets",
   "Hosted": "Hébergé",
@@ -9,7 +9,43 @@
   "Linkedin": "LinkedIn",
   "Resume": "CV",
   "devlp": "un ingénieur informatique",
-  "descdev": "Étudiant en ingénierie informatique à l'Université Privée d'Esprit de 2020 à 2025. Expérimenté dans la pile MERN et en JavaScript full-stack. À la recherche d'un projet de fin d'études à partir de mi-décembre 2024."
+  "descdev": "Étudiant en ingénierie informatique à l'École supérieure privée d'ingénierie et de technologie (Esprit) de 2020 à 2025. Passionné par le développement web et mobile, je suis à la recherche d'un projet de fin d'études à partir de mi-décembre 2024. Mon objectif est d'intégrer une équipe dynamique où je pourrai mettre à profit mes compétences et participer à des projets innovants.",
+  "aboutDesc": "Actuellement à la recherche d'un projet de fin d'études pour compléter mon diplôme en ingénierie informatique. Je suis un développeur logiciel assidu, passionné par la création d'outils utiles et la concrétisation des idées. Diplômé en 2020 d'une spécialisation en informatique et actuellement étudiant à l'ESPRIT, une école d'ingénierie privée axée sur l'apprentissage par projet. J'ai acquis des compétences en collaboration et en réflexion critique grâce à divers projets de groupe et stages. Expert en développement d'applications web avec le stack MERN et en utilisation de Spring Boot pour des applications Java de niveau entreprise. Je suis polyvalent, capable de travailler efficacement sur des projets front-end et back-end.",
+  "aboutme":"aperçu",
+  "3dbutton":"Découvrez-moi dans un monde 3D",
+  "Intership":"Stages",
+
+
+  "Intershipname1":"Stage full stack web (Plug and tel)",
+  "IntershipDate1": "Août 2024-Septembre 2024 ",
+  "intershipdesc":"Projets Web académiques et de stage",
+  "t1":"Réalisé un projet de migration des données critiques des appels téléphoniques de MySQL vers Elasticsearch pour optimiser les performances des requêtes statistiques, en utilisant le framework Spring",
+  "t2":"Optimisé la structure des indices Elasticsearch pour assurer des requêtes rapides et un stockage efficace.",
+  "t3":"Développé des statistiques interactives sur le front-end avec React.js, créant des visualisations dynamiques et intuitives qui optimisent l'analyse des données et enrichissent l'expérience utilisateur.",
+  "t4":"Mis en place des tableaux de bord et des outils de visualisation pour surveiller les performances des requêtes et les analyses de données",
+  "t6":"lien:",
+
+
+  "IntershipDate3": "Juin 2024 - Mai 2024",
+  "Intershipname3": "CollubHub (React js + Node js)",
+  "t31": "Création d'une plateforme en ligne permettant aux professionnels indépendants de proposer leurs serviceset aux clients de rechercher et engager des freelances dans divers domaines.",
+  "t32": "Mise en place de systèmes de recommandation basés sur des algorithmes de machine learning pour suggérerdes freelances ou des projets en fonction des préférences et du comportement des utilisateurs.,",
+  "t33":"Développement d'outils d'évaluation automatique des compétences des freelances à partir de leurs profils et de leurs précédents travaux, afin de fournir des évaluations précises et pertinentes.",
+  "t34":"Intégration de chatbots basés sur l'IA pour assister les utilisateurs dans leurs recherches, répondre à leurs questions, et fournir un support client en temps réel.",
+  
+
+  "Intershipname2": "Electrigo (Symfony)",
+  "IntershipDate2": "Septembre 2023 - Mai 2023",
+  "t21": "une plateforme en ligne dédiée à la location de vélos et de voitures électriques, offrant une solution pratique et durable pour les déplacements urbains",
+  "t22": "Permet aux utilisateurs de rechercher, réserver et louer des vélos et des voitures électriques à partir de la plateforme, avec des options personnalisables telles que la durée de location, le modèle de véhicule, et le lieu de prise en charge",
+  "t23":"Offre un espace personnel pour les utilisateurs afin de gérer leurs réservations, consulter l'historique des locations, et mettre à jour leurs informations personnelles.",
+  "t24":"Intégration de chatbots basés sur l'IA pour assister les utilisateurs dans leurs recherches, répondre à leurs questions, et fournir un support client en temps réel.",
+
+  "Intershipname4": "Stage en Formation Humaine et Sociale (Wifak Bank 2022)",
+  "IntershipDate4": "Juin 2022 - Août 2022",
+  "t41": "Application desktop en C# conçue pour gérer et suivre les échéances, facilitant le suivi et la vérification des paiements des employés.",
+  "t42": "Conception d'une interface utilisateur conviviale avec Windows Forms, permettant aux employés d'accéder facilement aux informations sur les échéances et d'effectuer des vérifications de manière efficace.",
+  "t43": "Optimisation de la structure des indices Elasticsearch pour garantir des requêtes rapides et un stockage efficace."
 
 
 }

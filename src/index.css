@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -14,3 +15,43 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@keyframes gradientChange {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.gradient-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  background: linear-gradient(45deg, purple, #8f5ffc, blue);
+  background-size: 300% 300%;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  animation: gradientChange 5s ease infinite;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.gradient-button:hover {
+  background: linear-gradient(45deg, purple, #8f5ffc, blue);
+  background-size: 300% 300%;
+}
+.overlay {
+  background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
+  padding: 1rem; /* Ajustez le padding si nécessaire */
+  border-radius: 8px;
+}
+
