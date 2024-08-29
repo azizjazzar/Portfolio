@@ -83,39 +83,7 @@ const ProjectComponent = () => {
                         <Project title={t("Intershipname1")} description={intershipDescription1}></Project>
                     </div>
 
-                    <div className="absolute top-[530px] left-1/2 transform -translate-x-1/2 border-4 border-white w-16 h-16 rounded-full bg-custom-card-gray">
-                        <img className='rounded-full' src="/770.jpg" alt="Collabhub"></img>
-                    </div>
-                    <div className="absolute left-[50px] top-[545px] text-custom-gray w-[300px]">
-                        <h1 className="text-white text-1xl sm:text-1xl md:text-1xl font-bold mb-4 font-serif pb-7">
-                            {t('IntershipDate2')}
-                        </h1>
-                    </div>
-                    <div className="absolute top-[580px] right-[-150px] transform -translate-x-1/2">
-                        <Project title={t("Intershipname3")} description={intershipDescription2}></Project>
-                    </div>
-
-                    <div className="absolute top-[1050px] left-1/2 transform -translate-x-1/2 border-4 border-white w-16 h-16 rounded-full bg-custom-card-gray">
-                        <img className='rounded-full' src="/images.jpg" alt="Electrigo"></img>
-                    </div>
-                    <div className="absolute top-[1070px] right-[-100px] text-custom-gray w-[400px]">
-                        <h1 className="text-white text-1xl sm:text-1xl md:text-1xl font-bold mb-4 font-serif pb-7">
-                            {t('IntershipDate2')}
-                        </h1>
-                    </div>
-                    <div className="absolute top-[1100px] left-[300px] transform -translate-x-1/2">
-                        <Project title={t("Intershipname2")} description={intershipDescription3}></Project>
-                    </div>
-
-                    <div className="absolute top-[1580px] left-1/2 transform -translate-x-1/2 border-4 border-white w-16 h-16 rounded-full bg-custom-card-gray">
-                        <img className='rounded-full' src="/wifak.jpg" alt="Wifak Bank"></img>
-                    </div>
-                    <div className="absolute top-[1595px] left-[70px] text-custom-gray w-[400px]">
-                        <h1 className="text-white text-1xl sm:text-1xl md:text-1xl font-bold mb-4 font-serif pb-7">
-                            {t('IntershipDate4')}
-                        </h1>
-                    </div>
-                    <Project title={t("Intershipname4")} description={intershipDescription4}></Project>
+           
 
                 </div>
             </div>
