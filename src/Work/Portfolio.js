@@ -1,6 +1,8 @@
 import React from "react";
 import { useTranslation } from 'react-i18next';
 import ProjectComponent from "./ProjectComponent";
+import HostedComponent from "./HostedComponent";
+import SkillsComponent from "./SkillsComponent";
 
 
 const Portfolio = () => {
@@ -21,7 +23,7 @@ const Portfolio = () => {
               {t("devlp")}
             </span>
           </h1>
-          <p className="text-white text-xl sm:text-2xl md:text-3xl mb-6 font-normal mt-6">
+          <p className="text-white text-xl sm:text-2xl md:text-2xl mb-6 font-normal mt-6">
             {t("descdev")}
           </p>
           <div className="flex items-center justify-center pt-[50px]">
@@ -43,12 +45,14 @@ const Portfolio = () => {
         <h2 className="text-custom-text-gray text-1xl sm:text-1xl md:text-1xl font-bold mb-4 font-serif">
           {t('aboutme')}
         </h2>
-        <p className="text-custom-text-gray text-lg sm:text-xl md:text-1xl mb-6 font-light pt-6 leading-[1.75]">
-          {t('aboutDesc')}
+        <p className="text-custom-text-gray text-sm sm:text-base md:text-lg mb-6 font-light pt-6 leading-[1.75]">
+        {t('aboutDesc')}
         </p>
       </div>
 
-     <ProjectComponent></ProjectComponent>
+     <ProjectComponent/>
+     <HostedComponent/>
+     <SkillsComponent/>
     </div>
   );
 };

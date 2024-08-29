@@ -8,7 +8,10 @@ module.exports = {
         'custom-purple': '#8f5ffc',
         'custom-gray':'#828096',
         'custom-text-gray':'#a7a5bb',
-        'custom-card-gray':"#383e56"
+        'custom-card-gray':"#383e56",
+        "custom-hberged":"#151030",
+        "custoom-text":"#7d7898",
+        "custom-new":"#202938"
       }
     },
   },

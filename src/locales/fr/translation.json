@@ -13,9 +13,11 @@
   "aboutDesc": "Actuellement à la recherche d'un projet de fin d'études pour compléter mon diplôme en ingénierie informatique. Je suis un développeur logiciel assidu, passionné par la création d'outils utiles et la concrétisation des idées. Diplômé en 2020 d'une spécialisation en informatique et actuellement étudiant à l'ESPRIT, une école d'ingénierie privée axée sur l'apprentissage par projet. J'ai acquis des compétences en collaboration et en réflexion critique grâce à divers projets de groupe et stages. Expert en développement d'applications web avec le stack MERN et en utilisation de Spring Boot pour des applications Java de niveau entreprise. Je suis polyvalent, capable de travailler efficacement sur des projets front-end et back-end.",
   "aboutme":"aperçu",
   "3dbutton":"Découvrez-moi dans un monde 3D",
+  "hosted": "Hébergé",
+  "hosteddesc": "Projets Hébergés",
+  "collab":"plateforme en ligne permettant aux professionnels indépendants de proposer leurs serviceset aux clients de rechercher et engager des freelances dans divers domaines",
+
   "Intership":"Stages",
-
-
   "Intershipname1":"Stage full stack web (Plug and tel)",
   "IntershipDate1": "Août 2024-Septembre 2024 ",
   "intershipdesc":"Projets Web académiques et de stage",
@@ -45,7 +47,17 @@
   "IntershipDate4": "Juin 2022 - Août 2022",
   "t41": "Application desktop en C# conçue pour gérer et suivre les échéances, facilitant le suivi et la vérification des paiements des employés.",
   "t42": "Conception d'une interface utilisateur conviviale avec Windows Forms, permettant aux employés d'accéder facilement aux informations sur les échéances et d'effectuer des vérifications de manière efficace.",
-  "t43": "Optimisation de la structure des indices Elasticsearch pour garantir des requêtes rapides et un stockage efficace."
+  "t43": "Optimisation de la structure des indices Elasticsearch pour garantir des requêtes rapides et un stockage efficace.",
 
+
+  
+    "Academic & Self-Learned Skills": "Compétences académiques et autodidactes",
+    "Programming Languages": "Langages de programmation",
+    "Databases": "Bases de données",
+    "DevOps Tools": "Outils DevOps",
+    "Adobe": "Adobe",
+    "Other": "Autre"
+  
+  
 
 }

@@ -67,7 +67,7 @@ const ProjectComponent = () => {
                 <p>{t("intershipdesc")}</p>
             </div>
 
-            <div className="relative mx-auto flex items-center justify-center h-[2100px] text-custom-purple">
+            <div className="relative mx-auto flex items-center justify-center h-[1950px] text-custom-purple">
                 <div className="absolute left-1/2 transform -translate-x-1/2 bg-white w-1 h-full"></div>
                 <div className="relative w-full h-full flex flex-col items-center">
 

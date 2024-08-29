@@ -13,6 +13,8 @@
   "aboutDesc": "Currently seeking a final year project opportunity to complete my Computer Science Engineering degree. I am a hardworking and dedicated software developer who enjoys crafting and building useful tools, bringing ideas to life. I graduated high school in the Science field in 2020 and joined ESPRIT since then, a private engineering school that employs Project-Based Learning. This active pedagogical approach allows students to generate knowledge through the creation of tangible products. Since joining, I have been involved in numerous group projects that have enhanced my collaboration skills and critical thinking. Through these projects, I have gained practical knowledge and hands-on experience, with 90% of my university studies centered around project development. In addition to my academic work, I have participated in several internships that have further sharpened my development skills, making me well-prepared for real-world work. I am particularly interested in developing Full stack web applications, but I am versatile and can work on other types of projects as well.",
   "aboutme": "overview",
   "3dbutton": "Discover me in a 3D world",
+  "hosted":"Hosted",
+  "hosteddesc":"Hosted Projects",
   "Intership": "Internships",
   "intershipdesc": "Some Academic & Internships Web Projects",
   "Intershipname1": "Full Stack Web Internship (Plug & Tel)",
@@ -23,6 +25,7 @@
   "t4": "Developed interactive statistics on the front-end using React.js, creating dynamic and intuitive visualizations that enhance data analysis and enrich the user experience.",
   "t5": "Implemented dashboards and visualization tools to monitor query performance and data analysis.",
   "t6": "link:",
+  "collab": "An online platform that allows independent professionals to offer their services and clients to search for and hire freelancers in various fields.",
 
 
   "Intershipname2": "Electrigo (Symfony)",
@@ -44,5 +47,12 @@
   "IntershipDate4": "June 2022 - August 2022",
   "t41": "Desktop application with C# designed to manage and track deadlines, facilitating efficient monitoring and verification of employee payments",
   "t42": "Designed a user-friendly interface using Windows Forms, allowing employees to easily access deadline information and perform verifications efficiently",
-  "t43": "Optimized the structure of Elasticsearch indices to ensure fast queries and efficient storage."
+  "t43": "Optimized the structure of Elasticsearch indices to ensure fast queries and efficient storage.",
+
+  "Academic & Self-Learned Skills": "Academic & Self-Learned Skills",
+  "Programming Languages": "Programming Languages",
+  "Databases": "Databases",
+  "DevOps Tools": "DevOps Tools",
+  "Adobe": "Adobe",
+  "Other": "Other"
 }
