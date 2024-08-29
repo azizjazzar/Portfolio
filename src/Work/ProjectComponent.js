@@ -115,7 +115,7 @@ const ProjectComponent = () => {
                             {t('IntershipDate4')}
                         </h1>
                     </div>
-                    <div className="absolute top-[1630px] right-[0px] transform -translate-x-1/2">
+                    <div className="absolute top-[1630px] right-[500px] transform -translate-x-1/2">
                         <Project title={t("Intershipname4")} description={intershipDescription4}></Project>
                     </div>
 
