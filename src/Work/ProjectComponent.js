@@ -59,62 +59,62 @@ const ProjectComponent = () => {
 
     return (
         <>
-        {/* Projects Section */}
-        <div className="text-white text-center pb-7">
-            <h2 className="text-white text-4xl sm:text-1xl md:text-4xl font-bold mb-4 font-serif">
-                {t('Intership')}
-            </h2>
-            <p>{t("intershipdesc")}</p>
-        </div>
-
-        {/* InternShip */}
-        <div className="relative mx-auto flex items-center justify-center h-[2100px] text-custom-purple">
-            <div className="absolute left-1/2 transform -translate-x-1/2 bg-white w-1 h-full"></div>
-            <div className="relative w-full h-full flex flex-col items-center">
-                {/*1 project */}
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 border-4 border-white w-16 h-16 rounded-full bg-custom-card-gray">
-                    <img className='rounded-full' src="/plug_logo.jpg" ></img>
-                </div>
-                <div className="absolute top-4 left-[-290px] text-custom-gray">
-                    <h1 className="text-white text-1xl sm:text-1xl md:text-1xl font-bold mb-4 font-serif pb-7">
-                        {t('IntershipDate1')}
-                    </h1>
-                </div>
-                <div className="absolute top-[30px] left-[300px] transform -translate-x-1/2">
-                    <Project title={t("Intershipname1")} description={intershipDescription1}></Project>
-                </div>
-                {/*2 project */}
-                <div className="absolute top-[530px] left-1/2 transform -translate-x-1/2 border-4 border-white w-16 h-16 rounded-full bg-custom-card-gray">
-                    <img className='rounded-full' src="/770.jpg" ></img>
-                </div>
-                <div className="absolute left-[50px] top-[545px] text-custom-gray w-[300px]">
-                    <h1 className="text-white text-1xl sm:text-1xl md:text-1xl font-bold mb-4 font-serif pb-7">
-                        {t('IntershipDate2')}
-                    </h1>
-                </div>
-                <div className="absolute top-[580px] right-[-150px] transform -translate-x-1/2">
-                    <Project title={t("Intershipname3")} description={intershipDescription2}></Project>
-                </div>
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 border-4 border-white w-16 h-16 rounded-full bg-custom-card-gray"></div>
-
-                {/*3 project */}
-                <div className="absolute top-[1050px] left-1/2 transform -translate-x-1/2 border-4 border-white w-16 h-16 rounded-full bg-custom-card-gray">
-                    <img className='rounded-full' src="/images.jpg" ></img>
-                </div>
-                <div className="absolute top-[1070px] right-[-100px] text-custom-gray w-[400px]">
-                    <h1 className="text-white text-1xl sm:text-1xl md:text-1xl font-bold mb-4 font-serif pb-7">
-                        {t('IntershipDate2')}
-                    </h1>
-                </div>
-                <div className="absolute top-[1100px] left-[300px] transform -translate-x-1/2">
-                    <Project title={t("Intershipname2")} description={intershipDescription3}></Project>
-                </div>
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 border-4 border-white w-16 h-16 rounded-full bg-custom-card-gray"></div>
-
+            {/* Projects Section */}
+            <div className="text-white text-center pb-7">
+                <h2 className="text-white text-4xl sm:text-1xl md:text-4xl font-bold mb-4 font-serif">
+                    {t('Intership')}
+                </h2>
+                <p>{t("intershipdesc")}</p>
             </div>
-              {/*4 project */}
+
+            {/* InternShip */}
+            <div className="relative mx-auto flex items-center justify-center h-[2100px] text-custom-purple">
+                <div className="absolute left-1/2 transform -translate-x-1/2 bg-white w-1 h-full"></div>
+                <div className="relative w-full h-full flex flex-col items-center">
+                    {/*1 project */}
+                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 border-4 border-white w-16 h-16 rounded-full bg-custom-card-gray">
+                        <img className='rounded-full' alt="Description of the image" src="/plug_logo.jpg" ></img>
+                    </div>
+                    <div className="absolute top-4 left-[-290px] text-custom-gray">
+                        <h1 className="text-white text-1xl sm:text-1xl md:text-1xl font-bold mb-4 font-serif pb-7">
+                            {t('IntershipDate1')}
+                        </h1>
+                    </div>
+                    <div className="absolute top-[30px] left-[300px] transform -translate-x-1/2">
+                        <Project title={t("Intershipname1")} description={intershipDescription1}></Project>
+                    </div>
+                    {/*2 project */}
+                    <div className="absolute top-[530px] left-1/2 transform -translate-x-1/2 border-4 border-white w-16 h-16 rounded-full bg-custom-card-gray">
+                        <img className='rounded-full' alt="Description of the image" src="/770.jpg" ></img>
+                    </div>
+                    <div className="absolute left-[50px] top-[545px] text-custom-gray w-[300px]">
+                        <h1 className="text-white text-1xl sm:text-1xl md:text-1xl font-bold mb-4 font-serif pb-7">
+                            {t('IntershipDate2')}
+                        </h1>
+                    </div>
+                    <div className="absolute top-[580px] right-[-150px] transform -translate-x-1/2">
+                        <Project title={t("Intershipname3")} description={intershipDescription2}></Project>
+                    </div>
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 border-4 border-white w-16 h-16 rounded-full bg-custom-card-gray"></div>
+
+                    {/*3 project */}
+                    <div className="absolute top-[1050px] left-1/2 transform -translate-x-1/2 border-4 border-white w-16 h-16 rounded-full bg-custom-card-gray">
+                        <img className='rounded-full' alt="Description of the image" src="/images.jpg" ></img>
+                    </div>
+                    <div className="absolute top-[1070px] right-[-100px] text-custom-gray w-[400px]">
+                        <h1 className="text-white text-1xl sm:text-1xl md:text-1xl font-bold mb-4 font-serif pb-7">
+                            {t('IntershipDate2')}
+                        </h1>
+                    </div>
+                    <div className="absolute top-[1100px] left-[300px] transform -translate-x-1/2">
+                        <Project title={t("Intershipname2")} description={intershipDescription3}></Project>
+                    </div>
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 border-4 border-white w-16 h-16 rounded-full bg-custom-card-gray"></div>
+
+                </div>
+                {/*4 project */}
                 <div className="absolute top-[1580px] left-1/2 transform -translate-x-1/2 border-4 border-white w-16 h-16 rounded-full bg-custom-card-gray">
-                    <img className='rounded-full' src="/wifak.jpg" ></img>
+                    <img className='rounded-full' alt="Description of the image" src="/wifak.jpg" ></img>
                 </div>
                 <div className="absolute top-[1595px] left-[70px] text-custom-gray w-[400px]">
                     <h1 className="text-white text-1xl sm:text-1xl md:text-1xl font-bold mb-4 font-serif pb-7">
@@ -126,8 +126,8 @@ const ProjectComponent = () => {
                 </div>
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 border-4 border-white w-16 h-16 rounded-full bg-custom-card-gray"></div>
 
-        </div>
-    </>
+            </div>
+        </>
     );
 };
 
