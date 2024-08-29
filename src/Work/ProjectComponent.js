@@ -1,25 +1,31 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 
+const Project = ({ title, description }) => (
+    <div className="relative bg-gray-800 text-white p-4 rounded-md mb-4 h-auto w-[450px]">
+        {/* Flèche */}
+        <div className="absolute top-0 left-0 transform -translate-x-full w-0 h-0 border-t-8 border-b-8 border-transparent border-r-8 border-white"></div>
+        <h3 className="text-xl font-semibold">{title}</h3>
+        <ul className="mt-2 list-disc list-outside pl-5">
+            {description.map((item, index) => (
+                <li key={index} className="mt-1 pl-2">
+                    {item}
+                </li>
+            ))}
+        </ul>
+    </div>
+);
+
+// PropType validation for the Project component
+Project.propTypes = {
+    title: PropTypes.string.isRequired,
+    description: PropTypes.arrayOf(PropTypes.node).isRequired,
+};
+
 const ProjectComponent = () => {
-    const { t } = useTranslation(); // Utilisation de la traduction
+    const { t } = useTranslation();
 
-    const Project = ({ title, description }) => (
-        <div className="relative bg-gray-800 text-white p-4 rounded-md mb-4 h-auto w-[450px]">
-            {/* Flèche */}
-            <div className="absolute top-0 left-0 transform -translate-x-full w-0 h-0 border-t-8 border-b-8 border-transparent border-r-8 border-white"></div>
-            <h3 className="text-xl font-semibold">{title}</h3>
-            <ul className="mt-2 list-disc list-outside pl-5">
-                {description.map((item, index) => (
-                    <li key={index} className="mt-1 pl-2">
-                        {item}
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
-
-    // Descriptions as arrays
     const intershipDescription1 = [
         t("t1"),
         t("t2"),
@@ -53,7 +59,6 @@ const ProjectComponent = () => {
 
     return (
         <>
-            {/* Projects Section */}
             <div className="text-white text-center pb-7">
                 <h2 className="text-white text-4xl sm:text-1xl md:text-4xl font-bold mb-4 font-serif">
                     {t('Intership')}
@@ -61,7 +66,6 @@ const ProjectComponent = () => {
                 <p>{t("intershipdesc")}</p>
             </div>
 
-            {/* Internships */}
             <div className="relative mx-auto flex items-center justify-center h-[2100px] text-custom-purple">
                 <div className="absolute left-1/2 transform -translate-x-1/2 bg-white w-1 h-full"></div>
                 <div className="relative w-full h-full flex flex-col items-center">
@@ -121,6 +125,12 @@ const ProjectComponent = () => {
             </div>
         </>
     );
-}
+};
+
+// PropType validation for the ProjectComponent
+ProjectComponent.propTypes = {
+    title: PropTypes.string,
+    description: PropTypes.arrayOf(PropTypes.node),
+};
 
 export default ProjectComponent;
