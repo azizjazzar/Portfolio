@@ -35,29 +35,7 @@ const ProjectComponent = () => {
         <span key="link-text">{t("t6")} <a href="https://www.plugandtel.com" className="text-green-500 underline">https://www.plugandtel.com</a></span>,
     ];
 
-    const intershipDescription2 = [
-        t("t31"),
-        t("t32"),
-        t("t33"),
-        t("t34"),
-        <span key="link-text">{t("t6")} <a href="https://github.com/azizjazzar/CollabhubFrontEnd" className="text-green-500 underline">https://github.com/azizjazzar/CollabhubFrontEnd</a></span>,
-    ];
-
-    const intershipDescription3 = [
-        t("t21"),
-        t("t22"),
-        t("t23"),
-        t("t24"),
-        <span key="link-text">{t("t6")} <a href="https://github.com/azizjazzar/ELectrigo" className="text-green-500 underline">https://github.com/azizjazzar/ELectrigo</a></span>,
-    ];
-
-    const intershipDescription4 = [
-        t("t41"),
-        t("t42"),
-        t("t43"),
-        <span key="link-text">{t("t6")} <a href="https://www.wifakbank.com" className="text-green-500 underline">https://www.wifakbank.com</a></span>,
-    ];
-
+ 
     return (
         <>
             <div className="text-white text-center pb-7">
