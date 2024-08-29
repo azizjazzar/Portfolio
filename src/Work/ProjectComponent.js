@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 const Project = ({ title, description }) => (
     <div className="relative bg-gray-800 text-white p-4 rounded-md mb-4 h-auto w-[450px]">
+        <div className="absolute top-0 left-0 transform -translate-x-full w-0 h-0 border-t-8 border-b-8 border-transparent border-r-8 border-white"></div>
         <h3 className="text-xl font-semibold">{title}</h3>
         <ul className="mt-2 list-disc list-outside pl-5">
             {description.map((item, index) => (
@@ -78,7 +79,7 @@ const ProjectComponent = () => {
                             {t('IntershipDate1')}
                         </h1>
                     </div>
-                    <div className="absolute top-[30px] ">
+                    <div className="absolute top-[30px] left-[300px] transform -translate-x-1/2">
                         <Project title={t("Intershipname1")} description={intershipDescription1}></Project>
                     </div>
 
@@ -90,7 +91,7 @@ const ProjectComponent = () => {
                             {t('IntershipDate2')}
                         </h1>
                     </div>
-                    <div className="absolute top-[580px] ">
+                    <div className="absolute top-[580px] right-[-150px] transform -translate-x-1/2">
                         <Project title={t("Intershipname3")} description={intershipDescription2}></Project>
                     </div>
 
@@ -102,7 +103,7 @@ const ProjectComponent = () => {
                             {t('IntershipDate2')}
                         </h1>
                     </div>
-                    <div className="absolute top-[1100px]">
+                    <div className="absolute top-[1100px] left-[300px] transform -translate-x-1/2">
                         <Project title={t("Intershipname2")} description={intershipDescription3}></Project>
                     </div>
 
@@ -114,7 +115,7 @@ const ProjectComponent = () => {
                             {t('IntershipDate4')}
                         </h1>
                     </div>
-                    <div className="absolute top-[1630px]  transform translate-x-1">
+                    <div className="absolute top-[1630px] right-20 transform translate-x-1">
                     <Project title={t("Intershipname4")} description={intershipDescription4}></Project>
                     </div>
 
