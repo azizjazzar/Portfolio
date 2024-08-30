@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { skills } from "../data/constants";
 import { Tilt } from "react-tilt";
 
-// Styled Components
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -125,29 +124,30 @@ const SkillImage = styled.img`
   height: 24px;
 `;
 
-// Component
 const Skills = () => {
   const [inView, setInView] = useState(false);
   const containerRef = useRef(null);
 
   useEffect(() => {
+    const containerNode = containerRef.current;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setInView(true);
-          observer.unobserve(containerRef.current); // Stop observing after in view
+          observer.unobserve(containerNode); // Stop observing after in view
         }
       },
       { threshold: 0.1 } // Adjust this value to control when the element is considered in view
     );
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
+    if (containerNode) {
+      observer.observe(containerNode);
     }
 
     return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
+      if (containerNode) {
+        observer.unobserve(containerNode);
       }
     };
   }, []);
