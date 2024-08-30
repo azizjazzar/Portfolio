@@ -11,7 +11,9 @@ module.exports = {
         'custom-card-gray':"#383e56",
         "custom-hberged":"#151030",
         "custoom-text":"#7d7898",
-        "custom-new":"#202938"
+        "custom-new":"#202938",
+        "custom-lowel":"#151030",
+        "custom-theni":"#110d24"
       }
     },
   },

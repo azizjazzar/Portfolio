@@ -14,19 +14,17 @@ const StyledCanvasWrapper = styled.div`
 const Stars = (props) => {
   const ref = useRef();
   const [sphere] = useState(() =>
-    random.inSphere(new Float32Array(20000), { radius: 4 }) // Sphère plus grande avec moins de points
+    random.inSphere(new Float32Array(5000), { radius: 1 })
   );
 
   useFrame((state, delta) => {
-    if (ref.current) {
-      ref.current.rotation.x -= delta / 15;
-      ref.current.rotation.y -= delta / 30;
-    }
+    ref.current.rotation.x -= delta / 10;
+    ref.current.rotation.y -= delta / 15;
   });
 
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
-      <Points ref={ref} positions={sphere} frustumCulled {...props}>
+      <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
         <PointMaterial
           transparent
           color="#f272c8"
@@ -42,7 +40,7 @@ const Stars = (props) => {
 const StyledStarsCanvas = () => {
   return (
     <StyledCanvasWrapper>
-      <Canvas camera={{ position: [0, 0, 5] }}> {/* Caméra reculée */}
+      <Canvas camera={{ position: [0, 0, 1] }}>
         <Suspense fallback={null}>
           <Stars />
         </Suspense>

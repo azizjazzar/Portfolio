@@ -6,7 +6,6 @@ import styled from "styled-components";
 import { experiences } from "../data/constants";
 import ExperienceCard from "../cards/ExperienceCard";
 import PropTypes from 'prop-types';
-import StyledStarsCanvas from "../canvas/Stars";
 
 const Container = styled.div`
   display: flex;
@@ -87,7 +86,6 @@ const Experience = () => {
           ))}
         </VerticalTimeline>
       </Wrapper>
-      <StyledStarsCanvas/>
     </Container>
   );
 };

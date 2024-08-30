@@ -3,6 +3,8 @@ import styled from "styled-components";
 import emailjs from 'emailjs-com';
 import EarthCanvas from "../canvas/Earth";
 import { motion, useInView } from 'framer-motion';
+import StyledStarsCanvas from "../canvas/Stars";
+
 // Styled components
 const Container = styled.div`
   display: flex;
@@ -29,7 +31,7 @@ const ContactForm = styled.form`
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  background-color: rgba(17, 25, 40, 0.83);
+  background-color: #110d24;
   border: 1px solid rgba(255, 255, 255, 0.125);
   padding: 32px;
   border-radius: 12px;
@@ -43,24 +45,25 @@ const ContactTitle = styled.div`
   margin-bottom: 6px;
   font-weight: 600;
   color: white;
+  
 `;
 
 const ContactInput = styled.input`
   flex: 1;
-  background-color: transparent;
+  background-color: #151030;
   border: 1px solid ${({ theme }) => `${theme.text_secondary}50`}; 
   outline: none;
   font-size: 18px;
   color: white;
   border-radius: 12px;
   padding: 12px 16px;
-  border: 1px solid ${({ theme }) => theme.primary};
+
 
 `;
 
 const ContactInputMessage = styled.textarea`
   flex: 1;
-  background-color: transparent;
+  background-color: #151030;
   border: 1px solid ${({ theme }) => `${theme.text_secondary}50`}; 
   outline: none;
   font-size: 18px;
@@ -140,6 +143,7 @@ const Contact = () => {
       >
         <EarthCanvas />
       </CanvasWrapper>
+      <StyledStarsCanvas></StyledStarsCanvas>
     </Container>
   );
 };

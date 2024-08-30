@@ -59,11 +59,11 @@ const Navbar = () => {
             </button>
           </div>
           <div className="lg:flex lg:items-center lg:justify-center hidden lg:block flex-grow">
-            <a href="/projects" className="text-custom-gray block px-4 py-2 rounded hover:text-white transition duration-300">{t('projects')}</a>
-            <a href="/about" className="text-custom-gray block px-4 py-2 rounded hover:text-white transition duration-300">{t('about')}</a>
-            <a href="/contact" className="text-custom-gray block px-4 py-2 rounded hover:text-white transition duration-300">{t('contact')}</a>
-            <a href="/hosted" className="text-custom-gray block px-4 py-2 rounded hover:text-white transition duration-300">{t('Hosted')}</a>
-            <a href="/skills" className="text-custom-gray block px-4 py-2 rounded hover:text-white transition duration-300">{t('Skills')}</a>
+            <a href="#project" className="text-custom-gray block px-4 py-2 rounded hover:text-white transition duration-300">{t('projects')}</a>
+            <a href="#about" className="text-custom-gray block px-4 py-2 rounded hover:text-white transition duration-300">{t('about')}</a>
+            <a href="#contact" className="text-custom-gray block px-4 py-2 rounded hover:text-white transition duration-300">{t('contact')}</a>
+            <a href="#hosted" className="text-custom-gray block px-4 py-2 rounded hover:text-white transition duration-300">{t('Hosted')}</a>
+            <a href="#skills" className="text-custom-gray block px-4 py-2 rounded hover:text-white transition duration-300">{t('Skills')}</a>
             <a href="https://github.com/azizjazzar" className="flex items-center space-x-2 text-custom-gray block px-4 py-2 rounded hover:text-white transition duration-300">
               <img src="/github.png" alt="GitHub" className="w-6 h-6" />
               <span>{t('GitHub')}</span>
