@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { skills } from "../data/constants";
 import { Tilt } from "react-tilt";
 
+// Styled Components
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -61,13 +62,13 @@ const Skill = styled.div`
   width: 100%;
   max-width: 500px;
   background-color: rgba(17, 25, 40, 0.83);
-  border: 1px solid transparent; /* Set border to transparent for background gradient */
+  border: 1px solid transparent;
   border-radius: 16px;
   padding: 18px 36px;
   position: relative;
   overflow: hidden;
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
-  border-image: linear-gradient(45deg, #00f, #f00, #8000ff) 1; /* Gradient border */
+  border-image: linear-gradient(45deg, #00f, #f00, #8000ff) 1;
 
   @media (max-width: 768px) {
     max-width: 400px;
@@ -100,7 +101,7 @@ const SkillItem = styled.div`
   font-size: 16px;
   font-weight: 400;
   color: white;
-  border: 1px solid ${({ theme }) => theme.text_primary + 80};
+  border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: 12px;
   padding: 12px 16px;
   display: flex;
@@ -124,6 +125,7 @@ const SkillImage = styled.img`
   height: 24px;
 `;
 
+// Component
 const Skills = () => {
   const [inView, setInView] = useState(false);
   const containerRef = useRef(null);
