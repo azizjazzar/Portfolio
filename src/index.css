@@ -54,4 +54,40 @@ code {
   padding: 1rem; /* Ajustez le padding si nécessaire */
   border-radius: 8px;
 }
+/* Ajoutez ceci dans votre fichier CSS global ou utilisez styled-components */
+/* Ajoutez ceci dans votre fichier CSS global ou utilisez styled-components */
+/* Ajoutez ceci dans votre fichier CSS global ou utilisez styled-components */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-left {
+  animation: slideInLeft 1s forwards;
+}
+
+.animate-right {
+  animation: slideInRight 1s forwards;
+}
+
+/* Ajoutez des styles pour les éléments qui doivent être cachés */
+.hidden {
+  display: none;
+}

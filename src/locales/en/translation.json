@@ -1,5 +1,5 @@
 {
-  "welcome": "Hi,I'am ",
+  "welcome": "Hi,I'am a",
   "about": "About",
   "projects": "Projects",
   "Hosted": "Hosted",
@@ -54,5 +54,8 @@
   "Databases": "Databases",
   "DevOps Tools": "DevOps Tools",
   "Adobe": "Adobe",
-  "Other": "Other"
+  "Other": "Other",
+
+  "se":"Software Engineer",
+  "fe":"Full stack developer"
 }

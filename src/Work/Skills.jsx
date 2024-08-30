@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { skills } from "../data/constants";
 import { Tilt } from "react-tilt";
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -56,20 +57,6 @@ const SkillsContainer = styled.div`
   justify-content: center;
 `;
 
-const animateBorder = `
-  @keyframes borderAnimation {
-    0% {
-      border-image: linear-gradient(45deg, #00f, #f00, #8000ff) 1;
-    }
-    50% {
-      border-image: linear-gradient(45deg, #f00, #8000ff, #00f) 1;
-    }
-    100% {
-      border-image: linear-gradient(45deg, #00f, #f00, #8000ff) 1;
-    }
-  }
-`;
-
 const Skill = styled.div`
   width: 100%;
   max-width: 500px;
@@ -81,7 +68,6 @@ const Skill = styled.div`
   overflow: hidden;
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
   border-image: linear-gradient(45deg, #00f, #f00, #8000ff) 1; /* Gradient border */
-  animation: borderAnimation 4s infinite linear; /* Animation applied */
 
   @media (max-width: 768px) {
     max-width: 400px;
@@ -92,8 +78,6 @@ const Skill = styled.div`
     max-width: 330px;
     padding: 10px 36px;
   }
-
-  ${animateBorder}
 `;
 
 const SkillTitle = styled.div`
@@ -141,23 +125,47 @@ const SkillImage = styled.img`
 `;
 
 const Skills = () => {
+  const [inView, setInView] = useState(false);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.unobserve(containerRef.current); // Stop observing after in view
+        }
+      },
+      { threshold: 0.1 } // Adjust this value to control when the element is considered in view
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <Container id="Skills">
+    <Container
+      id="Skills"
+      ref={containerRef}
+      className={inView ? '' : 'hidden'}
+    >
       <Wrapper>
         <Title>Skills</Title>
-        <Desc
-          style={{
-            marginBottom: "40px",
-          }}
-        >
-          Here are some of my skills on which I have been working on for the
-          past 3 years.
+        <Desc style={{ marginBottom: "40px" }}>
+          Here are some of my skills on which I have been working on for the past 3 years.
         </Desc>
 
         <SkillsContainer>
           {skills.map((skill, index) => (
             <Tilt key={`skill-${index}`}>
-              <Skill>
+              <Skill className={inView ? (index % 2 === 0 ? 'animate-left' : 'animate-right') : ''}>
                 <SkillTitle>{skill.title}</SkillTitle>
                 <SkillList>
                   {skill.skills.map((item, index_x) => (

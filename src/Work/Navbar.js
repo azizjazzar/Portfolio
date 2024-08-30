@@ -47,7 +47,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 w-full p-4 transition-colors duration-300 ${scrolled ? 'bg-gray-900' : 'bg-custom-dark'} z-50`} style={{ userSelect: 'none' }}>
+      <nav className={` fixed top-0 left-0 w-full p-4 transition-colors duration-300 ${scrolled ? 'bg-gray-900' : 'bg-custom-dark'} z-50`} style={{ userSelect: 'none' }}>
         <div className="container mx-auto flex items-center">
           <img src="/jazzar.jpg" alt="Aziz Jazzar" className="w-12 h-12 rounded-full mr-5" />
           <div className="text-white text-2xl font-bold">Aziz Jazzar</div>
@@ -58,7 +58,7 @@ const Navbar = () => {
               </svg>
             </button>
           </div>
-          <div className="lg:flex lg:items-center lg:justify-center hidden lg:block flex-grow">
+          <div className="lg:flex lg:items-center lg:justify-center hidden  flex-grow">
             <a href="#project" className="text-custom-gray block px-4 py-2 rounded hover:text-white transition duration-300">{t('projects')}</a>
             <a href="#about" className="text-custom-gray block px-4 py-2 rounded hover:text-white transition duration-300">{t('about')}</a>
             <a href="#contact" className="text-custom-gray block px-4 py-2 rounded hover:text-white transition duration-300">{t('contact')}</a>

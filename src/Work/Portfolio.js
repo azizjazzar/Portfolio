@@ -1,19 +1,18 @@
 import React from "react";
 import { useTranslation } from 'react-i18next';
-import ProjectComponent from "./ProjectComponent";
 import HostedComponent from "./HostedComponent";
-import SkillsComponent from "./SkillsComponent";
 import Experience from './Experience';
 import Contact from './Contact';
 import Skills from "./Skills";
+import { ReactTyped } from 'react-typed';
 
 const Portfolio = () => {
   const { t } = useTranslation();
+
   return (
     <div className="bg-custom-dark w-full min-h-screen flex flex-col pt-2 relative">
       {/* Main Section with Background Image */}
       <div className="relative w-full h-screen flex flex-col items-center justify-center">
-        
         <img
           src="/background.png"
           alt="Background"
@@ -23,7 +22,17 @@ const Portfolio = () => {
           <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-4 font-serif">
             {t("welcome")}{" "}
             <span className="text-custom-purple text-3xl sm:text-4xl md:text-5xl font-extrabold">
-              {t("devlp")}
+              <ReactTyped
+                strings={[
+                  t("fe"),
+                  t("se")
+                ]}
+                typeSpeed={50}
+                backSpeed={30}
+                backDelay={1000}
+                startDelay={500}
+                loop
+              />
             </span>
           </h1>
           <p className="text-white text-xl sm:text-2xl md:text-2xl mb-6 font-normal mt-6">
@@ -39,7 +48,6 @@ const Portfolio = () => {
 
       {/* About Section */}
       <div id="about" className="relative z-10 px-4 py-24 mx-auto max-w-5xl text-center">
-
         <h2 className="text-white text-4xl sm:text-1xl md:text-4xl font-bold mb-4 font-serif">
           {t('about')}
         </h2>
@@ -52,27 +60,27 @@ const Portfolio = () => {
       </div>
 
       <div id="project">
-      <Experience></Experience>
-
+        <Experience />
       </div>
+      
       <div id="hosted">
-      <HostedComponent />
-
+        <HostedComponent />
       </div>
+      
       <div id="skills">
-      <Skills></Skills>
+        <Skills />
       </div>
+      
       <div className="text-white text-center pt-28">
         <h2 className="text-white text-3xl sm:text-3xl md:text-3xl font-bold mb-4 font-serif">
           Contact
         </h2>
       </div>
+      
       <div id="contact">
-      <Contact></Contact>
+        <Contact />
       </div>
-
     </div>
-
   );
 };
 
