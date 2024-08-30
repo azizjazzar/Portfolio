@@ -11,9 +11,8 @@ module.exports = {
       {
         files: ['**/*.js', '**/*.jsx'],
         rules: {
-          'no-unused-vars': process.env.CI ? 'warn' : 'off',
-          'react/prop-types': process.env.CI ? 'warn' : 'off',
-          // Add more rules to adjust based on CI or local environment
+        "no-unused-vars": "warn",
+        "react/prop-types": "warn"
         },
       },
     ],
