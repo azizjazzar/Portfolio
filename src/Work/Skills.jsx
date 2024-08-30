@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { skills } from "../data/constants";
 import { Tilt } from "react-tilt";
-import StyledStarsCanvas from "../canvas/Stars";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
