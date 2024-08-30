@@ -188,4 +188,19 @@ const ExperienceCard = ({ experience }) => {
   );
 };
 
+ExperienceCard.propTypes = {
+  experience: PropTypes.shape({
+    img: PropTypes.string,
+    company: PropTypes.string,
+    date: PropTypes.string,
+    role: PropTypes.string,
+    desc: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.arrayOf(PropTypes.string)
+    ]),
+    url: PropTypes.string,
+    skills: PropTypes.arrayOf(PropTypes.string),
+  }).isRequired,
+};
+
 export default ExperienceCard;

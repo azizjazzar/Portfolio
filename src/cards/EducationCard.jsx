@@ -185,7 +185,6 @@ const ExperienceCard = ({ experience }) => {
   );
 };
 
-// Définition des propTypes pour ExperienceCard
 ExperienceCard.propTypes = {
   experience: PropTypes.shape({
     img: PropTypes.string,
