@@ -3,7 +3,10 @@ import { useTranslation } from 'react-i18next';
 import ProjectComponent from "./ProjectComponent";
 import HostedComponent from "./HostedComponent";
 import SkillsComponent from "./SkillsComponent";
-
+import Experience from './Experience';
+import Contact from './Contact';
+import Skills from "./Skills";
+import StyledStarsCanvas from "../canvas/Stars";
 
 const Portfolio = () => {
   const { t } = useTranslation();
@@ -11,6 +14,7 @@ const Portfolio = () => {
     <div className="bg-custom-dark w-full min-h-screen flex flex-col pt-2 relative">
       {/* Main Section with Background Image */}
       <div className="relative w-full h-screen flex flex-col items-center justify-center">
+      <StyledStarsCanvas></StyledStarsCanvas>
         <img
           src="/background.png"
           alt="Background"
@@ -32,13 +36,14 @@ const Portfolio = () => {
             </button>
           </div>
 
-         
-        </div> 
-      
+
+        </div>
+
       </div>
-     
+
       {/* About Section */}
       <div className="relative z-10 px-4 py-24 mx-auto max-w-5xl text-center">
+
         <h2 className="text-white text-4xl sm:text-1xl md:text-4xl font-bold mb-4 font-serif">
           {t('about')}
         </h2>
@@ -46,14 +51,28 @@ const Portfolio = () => {
           {t('aboutme')}
         </h2>
         <p className="text-custom-text-gray text-sm sm:text-base md:text-lg mb-6 font-light pt-6 leading-[1.75]">
-        {t('aboutDesc')}
+          {t('aboutDesc')}
         </p>
+        <StyledStarsCanvas></StyledStarsCanvas>
+
       </div>
 
-     <ProjectComponent/>
-     <HostedComponent/>
-     <SkillsComponent/>
+      <Experience></Experience>
+      <HostedComponent />
+     
+      <Skills></Skills>
+      <div className="text-white text-center pt-28">
+        <h2 className="text-white text-3xl sm:text-3xl md:text-3xl font-bold mb-4 font-serif">
+          Contact
+        </h2>
+      </div>
+      <div>
+      <Contact></Contact>
+
+      </div>
+
     </div>
+
   );
 };
 
