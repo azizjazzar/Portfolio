@@ -3,7 +3,6 @@ import styled from "styled-components";
 import emailjs from 'emailjs-com';
 import EarthCanvas from "../canvas/Earth";
 import { motion, useInView } from 'framer-motion';
-import StyledStarsCanvas from "../canvas/Stars";
 // Styled components
 const Container = styled.div`
   display: flex;
@@ -141,7 +140,6 @@ const Contact = () => {
       >
         <EarthCanvas />
       </CanvasWrapper>
-    <StyledStarsCanvas></StyledStarsCanvas>
     </Container>
   );
 };

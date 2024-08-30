@@ -14,13 +14,13 @@ const StyledCanvasWrapper = styled.div`
 const Stars = (props) => {
   const ref = useRef();
   const [sphere] = useState(() =>
-    random.inSphere(new Float32Array(5000), { radius: 1.2 })
+    random.inSphere(new Float32Array(20000), { radius: 4 }) // Sphère plus grande avec moins de points
   );
 
   useFrame((state, delta) => {
     if (ref.current) {
-      ref.current.rotation.x -= delta / 10;
-      ref.current.rotation.y -= delta / 15;
+      ref.current.rotation.x -= delta / 15;
+      ref.current.rotation.y -= delta / 30;
     }
   });
 
@@ -42,7 +42,7 @@ const Stars = (props) => {
 const StyledStarsCanvas = () => {
   return (
     <StyledCanvasWrapper>
-      <Canvas camera={{ position: [0, 0, 1] }}>
+      <Canvas camera={{ position: [0, 0, 5] }}> {/* Caméra reculée */}
         <Suspense fallback={null}>
           <Stars />
         </Suspense>

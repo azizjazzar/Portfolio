@@ -9,15 +9,15 @@ import StyledStarsCanvas from "../canvas/Stars";
 const Portfolio = () => {
   const { t } = useTranslation();
   return (
+    
     <div className="bg-custom-dark w-full min-h-screen flex flex-col pt-2 relative">
-      {/* Main Section with Background Image */}
+            <StyledStarsCanvas></StyledStarsCanvas>
+
+      <div>
+
+  {/* Main Section with Background Image */}
       <div className="relative w-full h-screen flex flex-col items-center justify-center">
-      <StyledStarsCanvas></StyledStarsCanvas>
-        <img
-          src="/background.png"
-          alt="Background"
-          className="absolute inset-0 w-full h-full object-cover opacity-50"
-        />
+        
         <div className="relative z-10 px-4 mx-auto max-w-5xl text-left">
           <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-4 font-serif">
             {t("welcome")}{" "}
@@ -40,6 +40,8 @@ const Portfolio = () => {
       </div>
 
       {/* About Section */}
+      <div className="relative w-full h-screen flex flex-col items-center justify-center">
+
       <div className="relative z-10 px-4 py-24 mx-auto max-w-5xl text-center">
 
         <h2 className="text-white text-4xl sm:text-1xl md:text-4xl font-bold mb-4 font-serif">
@@ -51,9 +53,13 @@ const Portfolio = () => {
         <p className="text-custom-text-gray text-sm sm:text-base md:text-lg mb-6 font-light pt-6 leading-[1.75]">
           {t('aboutDesc')}
         </p>
-        <StyledStarsCanvas></StyledStarsCanvas>
+        </div>
 
       </div>
+
+
+      </div>
+    
 
       <Experience></Experience>
       <HostedComponent />
