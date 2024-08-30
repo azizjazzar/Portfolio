@@ -1,8 +1,6 @@
 import React from "react";
 import { useTranslation } from 'react-i18next';
-import ProjectComponent from "./ProjectComponent";
 import HostedComponent from "./HostedComponent";
-import SkillsComponent from "./SkillsComponent";
 import Experience from './Experience';
 import Contact from './Contact';
 import Skills from "./Skills";

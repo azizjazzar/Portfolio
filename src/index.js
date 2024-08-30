@@ -5,7 +5,6 @@ import reportWebVitals from './reportWebVitals';
 import Portfolio from './Work/Portfolio';
 import Navbar from './Work/Navbar';
 import './il8n';  // Assure-toi que ton fichier de configuration i18n est correct
-import StyledStarsCanvas from './canvas/Stars';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

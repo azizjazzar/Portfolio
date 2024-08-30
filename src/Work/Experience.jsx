@@ -5,6 +5,7 @@ import "react-vertical-timeline-component/style.min.css";
 import styled from "styled-components";
 import { experiences } from "../data/constants";
 import ExperienceCard from "../cards/ExperienceCard";
+import PropTypes from 'prop-types';
 
 const Container = styled.div`
   display: flex;
@@ -54,7 +55,17 @@ const Desc = styled.div`
 
 const Experience = () => {
   const { t } = useTranslation();
-
+  ExperienceCard.propTypes = {
+    experience: PropTypes.shape({
+      img: PropTypes.string,
+      company: PropTypes.string,
+      role: PropTypes.string,
+      date: PropTypes.string,
+      desc: PropTypes.arrayOf(PropTypes.string),
+      url: PropTypes.string,
+      skills: PropTypes.arrayOf(PropTypes.string),
+    }).isRequired,
+  };
   return (
     <Container id="Experience" className="bg-custom-dark">
       <Wrapper>
@@ -66,6 +77,7 @@ const Experience = () => {
         >
         </Desc>
         <VerticalTimeline>
+          
           {experiences.map((experience, index) => (
             <ExperienceCard
               key={`experience-${index}`}
