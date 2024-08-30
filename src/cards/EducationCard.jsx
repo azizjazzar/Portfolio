@@ -4,6 +4,7 @@ import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import styled from "styled-components";
 import PropTypes from 'prop-types';
 
+// Styled components
 const Top = styled.div`
   width: 100%;
   display: flex;
@@ -104,23 +105,12 @@ const Url = styled.a`
   }
 `;
 
+// Component
 const ExperienceCard = ({ experience }) => {
   const { t } = useTranslation();
 
-  ExperienceCard.propTypes = {
-    experience: PropTypes.shape({
-      img: PropTypes.string.isRequired,
-      company: PropTypes.string.isRequired,
-      role: PropTypes.string.isRequired,
-      date: PropTypes.string.isRequired,
-      desc: PropTypes.arrayOf(PropTypes.string).isRequired,
-      url: PropTypes.string,
-      skills: PropTypes.arrayOf(PropTypes.string)
-    }).isRequired,
-  };
   return (
     <VerticalTimelineElement
-    
       icon={
         experience?.img && (
           <img
@@ -185,6 +175,20 @@ const ExperienceCard = ({ experience }) => {
       </Description>
     </VerticalTimelineElement>
   );
+};
+
+// Prop types validation
+ExperienceCard.propTypes = {
+  experience: PropTypes.shape({
+    img: PropTypes.string.isRequired,
+    company: PropTypes.string.isRequired,
+    role: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    desc: PropTypes.arrayOf(PropTypes.string).isRequired,
+    url: PropTypes.string,
+    skills: PropTypes.arrayOf(PropTypes.string),
+    urlMessage: PropTypes.string // Ensure this is included if you use it in the component
+  }).isRequired,
 };
 
 export default ExperienceCard;
