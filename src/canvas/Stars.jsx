@@ -18,13 +18,15 @@ const Stars = (props) => {
   );
 
   useFrame((state, delta) => {
-    ref.current.rotation.x -= delta / 10;
-    ref.current.rotation.y -= delta / 15;
+    if (ref.current) {
+      ref.current.rotation.x -= delta / 10;
+      ref.current.rotation.y -= delta / 15;
+    }
   });
 
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
-      <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
+      <Points ref={ref} positions={sphere} frustumCulled {...props}>
         <PointMaterial
           transparent
           color="#f272c8"

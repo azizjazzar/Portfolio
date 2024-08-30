@@ -2,7 +2,9 @@ import React from "react";
 import { useTranslation } from 'react-i18next';
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import styled from "styled-components";
+import PropTypes from 'prop-types';
 
+// Styled components
 const Top = styled.div`
   width: 100%;
   display: flex;
@@ -91,23 +93,19 @@ const ItemWrapper = styled.div`
 `;
 
 const Url = styled.a`
+  display: block;
   color: green;
   text-decoration: underline;
   font-size: 15px;
   font-weight: 400;
-  margin-left: 5px;  // Adjusted space between text and link
+  margin-top: 10px;
 
   &:hover {
     text-decoration: none;
   }
 `;
 
-const DescriptionLine = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 1px; 
-`;
-
+// Component
 const ExperienceCard = ({ experience }) => {
   const { t } = useTranslation();
 
@@ -151,24 +149,10 @@ const ExperienceCard = ({ experience }) => {
       <Description>
         {Array.isArray(experience?.desc) ? (
           experience.desc.map((item, index) => (
-            <DescriptionLine key={index}>
-              <Span>• {t(item)}</Span>
-              {index === experience.desc.length - 1 && experience.url && (
-                <Url href={experience.url} target="_blank" rel="noopener noreferrer">
-                  {experience.url}
-                </Url>
-              )}
-            </DescriptionLine>
+            <Span key={index}>• {t(item)}</Span>
           ))
         ) : (
-          <DescriptionLine>
-            <Span>• {t(experience?.desc)}</Span>
-            {experience.url && (
-              <Url href={experience.url} target="_blank" rel="noopener noreferrer">
-                {experience.url}
-              </Url>
-            )}
-          </DescriptionLine>
+          experience?.desc && <Span>• {t(experience?.desc)}</Span>
         )}
         {experience?.skills && (
           <>
@@ -183,23 +167,27 @@ const ExperienceCard = ({ experience }) => {
             </Skills>
           </>
         )}
+        {experience?.url && experience?.urlMessage && (
+          <Url href={experience.url} target="_blank" rel="noopener noreferrer">
+            {t(experience.urlMessage)}
+          </Url>
+        )}
       </Description>
     </VerticalTimelineElement>
   );
 };
 
+// Prop types validation
 ExperienceCard.propTypes = {
   experience: PropTypes.shape({
-    img: PropTypes.string,
-    company: PropTypes.string,
-    date: PropTypes.string,
-    role: PropTypes.string,
-    desc: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.arrayOf(PropTypes.string)
-    ]),
+    img: PropTypes.string.isRequired,
+    company: PropTypes.string.isRequired,
+    role: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    desc: PropTypes.arrayOf(PropTypes.string).isRequired,
     url: PropTypes.string,
     skills: PropTypes.arrayOf(PropTypes.string),
+    urlMessage: PropTypes.string // Ensure this is included if you use it in the component
   }).isRequired,
 };
 
