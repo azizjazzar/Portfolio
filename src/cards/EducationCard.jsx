@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from 'react-i18next';
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import styled from "styled-components";
+import PropTypes from 'prop-types';
 
 const Top = styled.div`
   width: 100%;
@@ -106,6 +107,17 @@ const Url = styled.a`
 const ExperienceCard = ({ experience }) => {
   const { t } = useTranslation();
 
+  ExperienceCard.propTypes = {
+    experience: PropTypes.shape({
+      img: PropTypes.string.isRequired,
+      company: PropTypes.string.isRequired,
+      role: PropTypes.string.isRequired,
+      date: PropTypes.string.isRequired,
+      desc: PropTypes.arrayOf(PropTypes.string).isRequired,
+      url: PropTypes.string,
+      skills: PropTypes.arrayOf(PropTypes.string)
+    }).isRequired,
+  };
   return (
     <VerticalTimelineElement
     
