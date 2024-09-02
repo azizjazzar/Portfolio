@@ -83,20 +83,6 @@ const Skill = styled.div`
     font-size: 12px;
   }
 `;
-
-const Url = styled.a`
-  display: block;
-  color: green;
-  text-decoration: underline;
-  font-size: 15px;
-  font-weight: 400;
-  margin-top: 10px;
-
-  &:hover {
-    text-decoration: none;
-  }
-`;
-
 // Define a function to get colors for skills
 const getSkillColor = (index) => {
   const colors = ["#1D4ED8", "#8A2BE2", "#EF4444", "#FFFFFF"];
