@@ -19,7 +19,7 @@ const Portfolio = () => {
           className="absolute inset-0 w-full h-full object-cover opacity-50"
         />
         <div className="relative z-10 px-4 mx-auto max-w-5xl text-left">
-          <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-4 font-serif">
+          <h1 className="text-white text-3xl sm:text-3xl md:text-5xl font-bold mb-4 font-serif">
             {t("welcome")}{" "}
             <span className="text-custom-purple text-3xl sm:text-4xl md:text-5xl font-extrabold">
               <ReactTyped
@@ -36,7 +36,9 @@ const Portfolio = () => {
             </span>
           </h1>
           <p className="text-white text-xl sm:text-2xl md:text-2xl mb-6 font-normal mt-6">
-            {t("descdev")}
+            {t("descdev1")}
+            <a href="https://esprit.tn" className="text-green-700 "> {t("esprit")} </a>
+            {t("descdev2")}
           </p>
           <div className="flex items-center justify-center pt-[50px]">
             <button className="gradient-button w-[400px]">

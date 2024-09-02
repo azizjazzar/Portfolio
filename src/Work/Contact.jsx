@@ -14,6 +14,7 @@ const Container = styled.div`
   padding: 1rem;
   width: 100%;
   height: 100vh;
+  overflow: hidden; /* Ajouté pour éviter les débordements */
 `;
 
 const Wrapper = styled(motion.div)`
@@ -24,6 +25,8 @@ const Wrapper = styled(motion.div)`
   width: 40%;
   padding: 20px;
   z-index: 2;
+  /* Vous pouvez ajouter max-width pour éviter les débordements */
+  max-width: 100%;
 `;
 
 const ContactForm = styled.form`
@@ -45,7 +48,6 @@ const ContactTitle = styled.div`
   margin-bottom: 6px;
   font-weight: 600;
   color: white;
-  
 `;
 
 const ContactInput = styled.input`
@@ -57,8 +59,6 @@ const ContactInput = styled.input`
   color: white;
   border-radius: 12px;
   padding: 12px 16px;
-
-
 `;
 
 const ContactInputMessage = styled.textarea`
@@ -70,8 +70,6 @@ const ContactInputMessage = styled.textarea`
   color: white;
   border-radius: 12px;
   padding: 12px 16px;
-    border: 1px  ${({ theme }) => theme.primary};
-  
 `;
 
 const ContactButton = styled.input`
@@ -92,13 +90,14 @@ const CanvasWrapper = styled(motion.div)`
   width: 40%;
   height: 80%;
   z-index: 1;
+  max-width: 100%; /* Assurez-vous que le contenu ne dépasse pas */
 `;
 
 // Component
 const Contact = () => {
   const form = useRef();
   const containerRef = useRef(null);
-  const isInView = useInView(containerRef, { once: true }); 
+  const isInView = useInView(containerRef, { once: true });
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -123,7 +122,7 @@ const Contact = () => {
   return (
     <Container ref={containerRef}>
       <Wrapper
-        initial={{ x: '-100vw', opacity: 0 }}
+        initial={{ x: '-50vw', opacity: 0 }}
         animate={isInView ? { x: 0, opacity: 1 } : {}}
         transition={{ type: 'spring', stiffness: 50, duration: 0.8 }}
       >
@@ -137,13 +136,13 @@ const Contact = () => {
       </Wrapper>
 
       <CanvasWrapper
-        initial={{ x: '100vw', opacity: 0 }}
+        initial={{ x: '50vw', opacity: 0 }}
         animate={isInView ? { x: 0, opacity: 1 } : {}}
         transition={{ type: 'spring', stiffness: 50, duration: 0.8 }}
       >
         <EarthCanvas />
       </CanvasWrapper>
-      <StyledStarsCanvas></StyledStarsCanvas>
+      <StyledStarsCanvas />
     </Container>
   );
 };

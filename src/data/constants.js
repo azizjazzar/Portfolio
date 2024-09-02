@@ -27,19 +27,14 @@ export const skills = [
           "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
       },
       {
-        name: "Redux",
-        image:
-          "https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg",
-      },
-      {
         name: "Next Js",
         image:
           "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACTklEQVR4Ab1XAaQqURB9DyohSykREpRIQSAlBCoECKUFCSRCBBEAaSEABQEoCIEASCwAUICALgCo83do0//9v819XX845O7VnDkzOzP7JWGaBd3C3IJpQVjAHeJ+Rs9a97vKLGrBsB1KgMhEP3FMUUwt4ENMfxr1yQIU4SSjRkbeOZtERmHk6pXQVDlnkHh9S+QLTm1hkiz4n/gzFQuny9FoFLquE+i34x+n02k0m00UCoV3BIzn3MMJrVYLtp1OJ0cS/X4f5/MZhmG8IyDsWtDfEaDIn2232/3zbrvdxuFwwGg04qRBt+VnETBNE0IIkE2n07/erdfrWK/X6Ha73Hb9ZXII3G43ivy3dNRqtZe7lUoFs9mM6oBDwCQCgquALT1FT3a5XF7qIZ/PYzgcolqtcggIIgBZAgRKB6lCRalp2uM8k8mAVMrlchwC+DEBipycE4n5fP44j8ViKJVKSCaTbAJCpgaez4vFIsjoWa/XA50FAgEkEgmEw2F2CkxZBZ5Br5tt1ITcbjd8Ph88Hg+7CBefECCsVitS4aVJcV9D/VMCVITk/Hq9YrPZyBBo2a1YMGvAcQYcj0cCtWMugcdYNhjDiBrP25mx3++x3W6RzWZZ8isfxzQLlsslJpMJpYY5jhkqcOH1ejEYDDAej9FoNOByuZxGsfqVzC7KTqcDSkkqleKsZOqX0mAwiHK5DGrJfr+fs5SqX8sjkQji8ThCoRC+v78Za7l6JagrUh3YkUuZpqgwDaecc9VYSDoV5Fg+at7n+eLN57kuE/EvzHr/Kvs31aYAAAAASUVORK5CYII=",
       },
       {
-        name: "Angular Js",
+        name: "Angular",
         image:
-          "https://en.m.wikipedia.org/wiki/File:Angular_full_color_logo.svg",
+          "/Angular.png",
       },
       {
         name: "HTML",
@@ -49,6 +44,11 @@ export const skills = [
         name: "CSS",
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
+      },
+      {
+        name: "Tailwind CSS",
+        image:
+          "/Tailwind.png",
       },
       {
         name: "JavaScript",
@@ -127,11 +127,6 @@ export const skills = [
     title: "DevOps",
     skills: [
       {
-        name: "AWS",
-        image:
-          "https://download.logo.wine/logo/Amazon_Web_Services/Amazon_Web_Services-Logo.wine.png",
-      },
-      {
         name: "Google Cloud",
         image:
           "https://static-00.iconduck.com/assets.00/google-cloud-platform-logo-icon-2048x1824-pg4wzspq.png",
@@ -140,11 +135,6 @@ export const skills = [
         name: "Docker",
         image:
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg",
-      },
-      {
-        name: "Jenkins",
-        image:
-          "https://toppng.com/uploads/preview/jenkins-logo-11609365847mufysaivph.png",
       },
       {
         name: "Nginx",
@@ -160,15 +150,10 @@ export const skills = [
         image:
           "https://upload.wikimedia.org/wikipedia/commons/0/00/Kubernetes_%28container_engine%29.png",
       },
-      {
-        name: "Prometheus",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Prometheus_software_logo.svg/1200px-Prometheus_software_logo.svg.png",
-      },
     ],
   },
   {
-    title: "Android",
+    title: "Android & iOS",
     skills: [
       {
         name: "Java",
@@ -195,8 +180,18 @@ export const skills = [
         image:
           "https://developer.android.com/static/studio/images/new-studio-logo-1_1920.png",
       },
+      {
+        name: "Swift",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg",
+      },
+      {
+        name: "Xcode",
+        image:
+          "/Xcode.webp",
+      }
     ],
-  },
+  },  
   {
     title: "Machine Learning",
     skills: [
@@ -204,16 +199,6 @@ export const skills = [
         name: "Python",
         image:
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
-      },
-      {
-        name: "Tenserflow",
-        image:
-          "https://static-00.iconduck.com/assets.00/tensorflow-icon-1911x2048-1m2s54vn.png",
-      },
-      {
-        name: "Keras",
-        image:
-          "https://miro.medium.com/v2/resize:fit:600/1*DKu_54iqz6C-p6ndo7rO3g.png",
       },
       {
         name: "Jupyter",
@@ -279,9 +264,10 @@ export const experiences = [
       "t3",
       "t4",
       "t5",
-      "t6"
     ],
-    url:"https://www.plugandtel.com"
+    url:"https://www.plugandtel.com",
+    skills: ["#Spring Boot", "#Mysql","#ElasticSearch","#React"]
+
   },
   {
     id: 1,
@@ -294,9 +280,10 @@ export const experiences = [
       "t22",
       "t23",
       "t24",
-      "t6"
     ],
-    url:"https://github.com/azizjazzar/CollabhubFrontEnd"
+    url:"https://github.com/azizjazzar/CollabhubFrontEnd",
+    skills: ["#Symfony","#Java fx","#Codenameone" ]
+
   },
   {
     id: 2,
@@ -309,9 +296,10 @@ export const experiences = [
       "t32",
       "t33",
       "t34",
-      "t6"
     ],
-    url:"https://github.com/azizjazzar/ELectrigo"
+    url:"https://github.com/azizjazzar/ELectrigo",
+    skills: ["Node js", "Mongo DB","Python","React js"]
+
 
   },
   {
@@ -324,9 +312,10 @@ export const experiences = [
       "t41",
       "t42",
       "t43",
-      "t6"
     ],
-    url:"https://www.wifakbank.com"
+    url:"https://www.wifakbank.com",
+    skills: ["c++","Qt" ]
+
   },
 ];
 

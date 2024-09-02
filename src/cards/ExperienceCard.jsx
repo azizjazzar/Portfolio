@@ -69,27 +69,19 @@ const Skills = styled.div`
   width: 100%;
   display: flex;
   gap: 12px;
-  margin-top: -10px;
-`;
-
-const Span = styled.div`
-  display: -webkit-box;
-  max-width: 100%;
+  margin-top: 10px;
 `;
 
 const Skill = styled.div`
   font-size: 15px;
   font-weight: 400;
-  color: ${({ theme }) => theme.text_primary + 99};
+  color: ${({ color }) => color || "#fff"};
+  background-color: ${({ bgColor }) => bgColor || "#333"};
+  padding: 4px 8px;
+  border-radius: 4px;
   @media only screen and (max-width: 768px) {
     font-size: 12px;
   }
-`;
-
-const ItemWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
 `;
 
 const Url = styled.a`
@@ -104,6 +96,12 @@ const Url = styled.a`
     text-decoration: none;
   }
 `;
+
+// Define a function to get colors for skills
+const getSkillColor = (index) => {
+  const colors = ["#1D4ED8", "#8A2BE2", "#EF4444", "#FFFFFF"];
+  return colors[index] || colors[colors.length - 1];
+};
 
 // Component
 const ExperienceCard = ({ experience }) => {
@@ -149,28 +147,25 @@ const ExperienceCard = ({ experience }) => {
       <Description>
         {Array.isArray(experience?.desc) ? (
           experience.desc.map((item, index) => (
-            <Span key={index}>• {t(item)}</Span>
+            <div key={index}>• {t(item)}</div>
           ))
         ) : (
-          experience?.desc && <Span>• {t(experience?.desc)}</Span>
+          experience?.desc && <div>• {t(experience?.desc)}</div>
         )}
         {experience?.skills && (
           <>
             <br />
             <Skills>
-              <b>{t('Skills')}</b>
-              <ItemWrapper>
-                {experience?.skills?.map((skill, index) => (
-                  <Skill key={index}>• {t(skill)}</Skill>
-                ))}
-              </ItemWrapper>
+              {experience.skills.map((skill, index) => (
+                <Skill
+                  key={index}
+                  color={getSkillColor(index)}
+                >
+                  {skill}
+                </Skill>
+              ))}
             </Skills>
           </>
-        )}
-        {experience?.url && experience?.urlMessage && (
-          <Url href={experience.url} target="_blank" rel="noopener noreferrer">
-            {t(experience.urlMessage)}
-          </Url>
         )}
       </Description>
     </VerticalTimelineElement>
@@ -180,14 +175,13 @@ const ExperienceCard = ({ experience }) => {
 // Prop types validation
 ExperienceCard.propTypes = {
   experience: PropTypes.shape({
-    img: PropTypes.string.isRequired,
-    company: PropTypes.string.isRequired,
-    role: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired,
-    desc: PropTypes.arrayOf(PropTypes.string).isRequired,
+    img: PropTypes.string,
+    company: PropTypes.string,
+    role: PropTypes.string,
+    date: PropTypes.string,
+    desc: PropTypes.arrayOf(PropTypes.string),
     url: PropTypes.string,
     skills: PropTypes.arrayOf(PropTypes.string),
-    urlMessage: PropTypes.string // Ensure this is included if you use it in the component
   }).isRequired,
 };
 
