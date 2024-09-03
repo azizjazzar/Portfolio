@@ -4,7 +4,7 @@ import LanguageDropdown from "./LanguageDropdown";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [language, setLanguage] = useState('fr'); // État pour la langue
+  const setLanguage = useState('fr'); // État pour la langue
   const [showModal, setShowModal] = useState(false); // État pour afficher la modale
   const { t } = useTranslation(); // Retirer i18n car non utilisé
   const dropdownRef = useRef(null);
