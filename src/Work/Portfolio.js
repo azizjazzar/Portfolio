@@ -7,7 +7,13 @@ import Skills from "./Skills";
 import { ReactTyped } from 'react-typed';
 
 const Portfolio = () => {
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
+
+  const handleResumeClick = () => {
+    const language = i18n.language; // Récupère la langue actuelle
+    const pdfUrl = language === 'fr' ? '/resume_azizjazzar_fr.pdf' : '/resume_azizjazzar_en.pdf';
+    window.open(pdfUrl, '_blank'); // Téléchargez le PDF correspondant à la langue choisie
+  };
 
   return (
     <div className="bg-custom-dark w-full min-h-screen flex flex-col pt-2 relative">
@@ -37,12 +43,12 @@ const Portfolio = () => {
           </h1>
           <p className="text-white text-xl sm:text-2xl md:text-2xl mb-6 font-normal mt-6">
             {t("descdev1")}
-            <a href="https://esprit.tn" className="text-green-700 "> {t("esprit")} </a>
+            <a href="https://esprit.tn" className="text-green-700"> {t("esprit")} </a>
             {t("descdev2")}
           </p>
           <div className="flex items-center justify-center pt-[50px]">
-            <button className="gradient-button w-[400px]">
-              {t("3dbutton")}
+            <button className="gradient-button w-[400px]" onClick={handleResumeClick}>
+              {t('Resume')}
             </button>
           </div>
         </div>
@@ -64,21 +70,21 @@ const Portfolio = () => {
       <div id="project">
         <Experience />
       </div>
-      
+
       <div id="hosted">
         <HostedComponent />
       </div>
-      
+
       <div id="skills">
         <Skills />
       </div>
-      
+
       <div className="text-white text-center pt-28">
         <h2 className="text-white text-3xl sm:text-3xl md:text-3xl font-bold mb-4 font-serif">
           Contact
         </h2>
       </div>
-      
+
       <div id="contact">
         <Contact />
       </div>

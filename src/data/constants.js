@@ -314,7 +314,7 @@ export const experiences = [
       "t43",
     ],
     url:"https://www.wifakbank.com",
-    skills: ["c++","Qt" ]
+    skills: ["C++","Qt" ]
 
   },
 ];
