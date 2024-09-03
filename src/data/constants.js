@@ -298,7 +298,7 @@ export const experiences = [
       "t34",
     ],
     url:"https://github.com/azizjazzar/ELectrigo",
-    skills: ["Node js", "Mongo DB","Python","React js"]
+    skills: ["#Node js", "#Mongo DB","#Python","#React js"]
 
 
   },
@@ -314,7 +314,7 @@ export const experiences = [
       "t43",
     ],
     url:"https://www.wifakbank.com",
-    skills: ["C++","Qt" ]
+    skills: ["#C++","#Qt" ]
 
   },
 ];
